@@ -1,0 +1,120 @@
+h1, p, body {
+  margin: 0;
+}
+
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+p, a {
+  font-size: 20px;
+}
+
+header {
+  background-color: rgb(244, 79, 79);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+main {
+  padding: 10px;
+}
+
+#parent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contents {
+  border: 3px solid rgb(238, 204, 204);
+  padding: 10px 15px;
+  text-align: center;
+  background-color: white;
+}
+
+.contents h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+  position: relative;
+  padding-left: 20px;
+}
+
+.contents h2::before {
+  content: "●";
+  color: rgb(239, 111, 139);
+  position: absolute;
+  left: 0;
+}
+
+.contents p:nth-of-type(2)::first-letter {
+  font-weight: bold;
+  color: rgb(97, 206, 249);
+}
+
+.contents img {
+  width: 70%;
+  margin: 10px 0;
+}
+
+footer {
+  background-color: rgb(244, 79, 79);
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer a {
+  color: white;
+  font-size: 16px;
+  text-decoration: underline;
+  line-height: 1;
+}
+
+footer a:visited {
+  color: rgb(193, 234, 251);
+}
+
+footer a:hover {
+  color: rgb(245, 178, 168);
+}
+
+@media screen and (min-width: 769px) {
+  #parent {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+  }
+
+  .contents {
+      flex: 1;
+      margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contents h2 {
+      font-size: 30px;
+  }
+
+  .contents p {
+      font-size: 25px;
+  }
+}
